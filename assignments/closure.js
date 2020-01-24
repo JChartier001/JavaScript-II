@@ -3,7 +3,18 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-
+function parent(parentName) {
+    console.log(`Hi, my name is ${parentName}`);
+    function child(childName) {
+        console.log(`Hi, my name is ${childName}, and my parent is ${parentName}`);
+        function pet(petName) {
+            console.log(`Hi, my name is ${petName}.  I am the pet of ${parentName} and ${childName}`);
+        }//closes pet
+        pet("Angel");
+    }//closes chld
+    child("Abrianna");
+};//closes parent
+parent("Jen");
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
